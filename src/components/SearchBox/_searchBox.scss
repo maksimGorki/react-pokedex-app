@@ -1,0 +1,40 @@
+.searcBoxContainer {
+  @extend %flex-row-start-center;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  background-image: url(../images/bg-tile.png);
+  border: 3px solid black;
+  border-radius: 10px;
+
+  .searchBoxItem {
+    position: relative;
+    color: #666;
+    cursor: pointer;
+
+    &:focus-within,
+    &:hover {
+      color: #000;
+    }
+
+    input {
+      appearance: none;
+      font-family: inherit;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      background: none;
+      font-size: 0.75rem;
+      padding: 5px 10px 5px 20px;
+      color: inherit;
+      max-width: 180px;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }
+}

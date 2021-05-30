@@ -1,0 +1,65 @@
+.link {
+  text-decoration: none;
+  color: black; /* Unvisited link  */
+  &:visited {
+    color: black;
+  } /* Visited link    */
+  &:hover {
+    color: black;
+  } /* Mouse over link */
+  &:active {
+    color: black;
+  } /* Selected link   */
+}
+
+.pokemonCardContainer {
+  @extend %flex-col-start-center;
+  padding: 1rem 0;
+  margin: 0.3rem;
+  border: 5px solid white;
+  border-radius: 1rem;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.363);
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .cardNumber {
+    border-radius: 1rem;
+    padding: 0.2rem 0.4rem;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cardDetails {
+    @extend %flex-col-start-center;
+    text-transform: capitalize;
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    margin-top: 0.5rem;
+    span {
+      cursor: pointer;
+      &:hover {
+        color: $color-accent-light;
+      }
+    }
+  }
+}

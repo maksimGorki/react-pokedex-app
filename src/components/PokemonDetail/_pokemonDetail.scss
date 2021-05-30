@@ -1,0 +1,41 @@
+.pokemonDetailContainer {
+  @extend %flex-row-start-center;
+  margin: 3rem auto;
+  min-height: 60vh;
+  padding: 3rem 1rem;
+  background-image: url(../images/bg-tile.png);
+  border: 3px solid black;
+  border-radius: 10px;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+
+  .pokemonCard {
+    @extend %flex-col-center-center;
+  }
+
+  .pokemonDetail {
+    @extend %flex-col-start-center;
+
+    .attributesContainer {
+      width: 50vw;
+      margin: 1rem 2rem;
+      @extend %flex-row-start-center;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 640px) {
+        flex-direction: column;
+      }
+
+      .attributes {
+        @extend %flex-col-start-center;
+        margin-left: 1rem;
+
+        .attributeName {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

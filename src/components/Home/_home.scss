@@ -1,0 +1,62 @@
+.homePageContainer {
+  @extend %flex-row-start-center;
+  padding: 3rem 1rem;
+  background-image: url(../images/bg-tile.png);
+  padding: 1rem 2rem;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 5rem 1rem;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column-reverse;
+  }
+
+  .leftSide {
+    @extend %flex-col-start-start;
+
+    .buttons {
+      @extend %flex-row-start-center;
+
+      @media screen and (max-width: 430px) {
+        flex-direction: column;
+      }
+
+      .button {
+        margin-right: 1rem;
+        margin-top: 1rem;
+
+        text-decoration: none;
+        color: black; /* Unvisited link  */
+        &:visited {
+          color: black;
+        } /* Visited link    */
+        &:hover {
+          color: black;
+        } /* Mouse over link */
+        &:active {
+          color: black;
+        } /* Selected link   */
+
+        button {
+          @extend %flex-row-start-center;
+          padding: 0.2rem 0.5rem;
+          background-color: transparent;
+          border: 2px solid black;
+          font-size: large;
+          font-weight: bolder;
+          border-radius: 10px;
+          &:hover {
+            cursor: pointer;
+            background-color: black;
+            color: $color-accent-light;
+            transition: all 0.3s linear;
+          }
+        }
+      }
+    }
+  }
+
+  .rightSide {
+    margin-left: 1rem;
+  }
+}

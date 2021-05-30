@@ -1,0 +1,27 @@
+@import "utilities";
+@import "config";
+@import "../components/Navbar/navbar";
+@import "../components/Explore/explore";
+@import "../components//PokemonCard/pokemonCard";
+@import "../components/SearchBox/searchBox";
+@import "../components/PokemonDetail/pokemonDetail";
+@import "../components/Home/home";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url(../images/bg-pokemon.png);
+    background-repeat: repeat;
+    font-family: "Poppins", sans-serif;
+
+    .wrapper {
+      width: 100%;
+      @extend %flex-col-start-center;
+    }
+  }
+}

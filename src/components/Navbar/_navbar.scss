@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 10px 5px #00000050;
+
+  .navbar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    @extend %flex-row-spacebetween-center;
+
+    &TitleContainer {
+      @extend %flex-row-center-center;
+
+      .navbarTitle {
+        text-decoration: none;
+      }
+
+      h2 {
+        color: $color-accent-light;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &WebItemContainer {
+      @extend %flex-row-start-center;
+
+      .navbarItem {
+        margin-left: 2rem;
+        text-decoration: none;
+        color: white;
+        align-items: center;
+        &:hover {
+          color: #c81d25;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
