@@ -5,7 +5,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { CgPokemon } from "react-icons/cg";
 
 const Navbar = () => {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const handleCurrentWidth = () => {
     const width = window.innerWidth;
     setWindowWidth(width);
